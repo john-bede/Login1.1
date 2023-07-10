@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="water.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
 </head>
 <body>
-    <form action="">
+    <form action="process-signup.php" method="post">
         <div>
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
@@ -20,7 +21,11 @@
             <input type="password" id="password" name="password">
         </div>
         <div>
+            <label for="password_confirmation">Repeat password</label>
+            <input type="password" id="password_confirmation" name="password_confirmation">
         </div>
+
+        <button>Sign up</button>
     </form>
 </body>
 </html>
