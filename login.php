@@ -14,7 +14,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if ($user){
         if(password_verify($_POST["password"], $user["password_hash"])){
-            die("Login successful");
+            session_start();
+
+            $_SESSION["user_id"] = $user["id"];
+
+            header("Location: index.php");
+            exit;
         }
     }
     $is_invalid=true;
@@ -28,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <link rel="stylesheet" href="water.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login.php</title>
+    <title>login</title>
 </head>
 <body>
 
