@@ -40,7 +40,8 @@ $stmt->bind_param("sss",
                 
 if($stmt->execute()){
 
-    echo "Signup successful";
+    header("Location: signup-success.html");
+    exit;
 
 }
 else{
