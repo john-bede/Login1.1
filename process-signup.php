@@ -33,7 +33,11 @@ if(! $stmt -> prepare($sql)){
     die("SQL error: " . $mysqli->error);
 }
 
-$stmt->prepare($sql);
+$stmt->bind_param("sss",
+                    $_POST["name"],
+                    $_POST["email"],
+                    $password_hash);
+                
+$stmt->execute();
 
-print_r($_POST);
-var_dump($password_hash);
+echo "Signup successful";
