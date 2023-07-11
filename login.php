@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <form method="post">
         <label for="email">email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" value="<?=htmlspecialchars($_POST["email"]?? "")?>">
 
         <label for="password">password</label>
         <input type="password" name="password" id="password">
