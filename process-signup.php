@@ -38,6 +38,11 @@ $stmt->bind_param("sss",
                     $_POST["email"],
                     $password_hash);
                 
-$stmt->execute();
+if($stmt->execute()){
 
-echo "Signup successful";
+    echo "Signup successful";
+
+}
+else{
+    die($mysqli->error . " ERROR NO. " . $mysqli->errno);
+}
