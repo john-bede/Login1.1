@@ -2,8 +2,6 @@
 
 session_start();
 
-print_r($_SESSION);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +19,6 @@ print_r($_SESSION);
         <p>You are logged in</p>
 
     <?php else: ?>
-        <p><a href="login.php">Logi n</a> or <a href="signup.html">Sign up</a></p>
+        <p><a href="login.php">Log in</a> or <a href="signup.html">Sign up</a></p>
 
     <?php endif; ?>
